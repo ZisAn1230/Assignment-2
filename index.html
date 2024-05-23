@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Player Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+ 
+        <section id="search-section" class="my-4">
+            <h1>Search for Players</h1>
+            <div class="input-group mb-3">
+                <input type="text" id="search-input" class="form-control" placeholder="Enter player name">
+                <div class="input-group-append">
+                    <button id="search-button" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+           
+            <section id="players-section" class="flex-grow-1 my-4">
+                <h2>Players</h2>
+                <div id="players-container" class="row"></div>
+            </section>
+
+            <section id="group-section" class="my-4">
+                <div id="group-container">
+                    <h2>Group</h2>
+                    <p>Player Count: <span id="player-count">0</span></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+   
+    <div class="modal fade" id="playerModal" tabindex="-1" role="dialog" aria-labelledby="playerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playerModalLabel">Player Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
